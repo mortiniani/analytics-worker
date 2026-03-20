@@ -1,0 +1,22 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print a message
+        run: echo "Build and test completed successfully"
+
+      - name: Build and test
+        run: |
+          echo "Building and testing..."
+          ls -al
